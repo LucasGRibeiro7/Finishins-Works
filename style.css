@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  height: 100vh;
+}
+body * {
+  font-family: "Inter", sans-serif;
+  color: white;
+}
+
+#container {
+  width: 100%;
+  max-width: 100%;
+  background-color: #7a1515fd;
+  height: 20%;
+}
+#logo img {
+  width: 250px;
+  padding: 10px;
+  margin-left: 20%;
+  border-radius: 10%;
+}
+main {
+  display: flex;
+  justify-content: center;
+  background-color: #b36b19;
+}
+
+main section ul {
+  list-style:none;
+  display: flex;
+  flex-direction: row;
+  border-radius: 3%;
+  gap: 190px;
+  font-size: 25px;
+  margin-left: 200px;
+}
+section ul li {
+}
