@@ -5,40 +5,113 @@
 }
 
 body {
-  background-color: white;
-  height: 100vh;
+  background-color: rgb(235, 230, 230);
 }
 body * {
   font-family: "Inter", sans-serif;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 #container {
   width: 100%;
-  max-width: 100%;
-  background-color: #7a1515fd;
-  height: 20%;
+  background-color: #9e0000;
+  height: 25%;
+  
 }
 #logo img {
-  width: 250px;
-  padding: 10px;
-  margin-left: 20%;
-  border-radius: 10%;
+  display: flex;
+  width: 400px;
+  position: fixed;
+  margin-left: 100px;
+  margin-top: -140px; 
+  cursor: pointer;
+  
 }
+
+#description {
+  display: flex;
+  font-size: 30px;
+  justify-content: end;
+  padding-top: 100px;
+  padding-right: 30px;
+  
+}
+
+#information {
+  display: flex;
+  justify-content: end;
+  font-size: 10px;
+  padding-right: 110px;
+  
+}
+
 main {
   display: flex;
   justify-content: center;
-  background-color: #b36b19;
+  background-color: #000000;
+  margin-top: 88px;
+  
 }
 
 main section ul {
   list-style:none;
   display: flex;
-  flex-direction: row;
-  border-radius: 3%;
   gap: 190px;
   font-size: 25px;
-  margin-left: 200px;
 }
 section ul li {
+  cursor: pointer;
+  transition: background 0.2s;
+}
+section ul li:hover{
+  background-color: rgba(248, 248, 248, 0.274);
+  border-radius: 10%;
+
+}
+
+#SocialLinks{
+  font-size: 25px;
+  display: flex;
+  position: absolute;
+  top: 180px;
+  left: 850px;
+  gap: 25px;
+}
+
+#SocialLinks a:hover{
+
+  background-color: rgba(255, 255, 255, 0.288);
+  transition: background 0.2s;
+  border-radius: 5%;
+}
+
+
+#pictures  {
+  display: flex;
+  border: solid rgb(108, 108, 109) 5px;
+  margin-top: 100px;
+  margin-left: 20px;
+  width: 569px;
+  height: 710px;
+  
+  
+}
+#pictures p {
+  display: flex;
+  height: 700px;
+  
+  
+}
+#pictures h1{
+  color: #000000;
+  position: absolute;
+  font-size: 40px;
+  top: 310px;
+  left: 215px;
+}
+#explication{
+  color: #000000;
+  position:absolute;
+  top: 30%;
+  left: 50%;
 }
