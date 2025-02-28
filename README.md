@@ -32,7 +32,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 O site foi criado para uma empresa americana de Work Finish, com um tema minimalista. O projeto contém funcionalidades pedidas pelo cliente, criado com muito carinho e empenho. Funcionalidades práticas que facilitam o acesso e a práticidade do usário.
 
-- [Acesse o projeto finalizado, online](https://lucasgribeiro7.github.io/Site-cafeteria/)
+- [Acesse o projeto finalizado, online](https://lucasgribeiro7.github.io/Finishins-Works/)
 
 ## 🔖 Layout
 
