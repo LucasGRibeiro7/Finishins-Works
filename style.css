@@ -1,117 +1,231 @@
+:root {
+  --main-color: #cfb002;
+  --black: #000000;
+  --bg: #c0c0c0;
+  --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+  --white: #ffffff;
+}
+
+@keyframes shake {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", serif;
 }
 
 body {
-  background-color: rgb(235, 230, 230);
-}
-body * {
-  font-family: "Inter", sans-serif;
-  color: rgb(255, 255, 255);
 }
 
-#container {
-  width: 100%;
-  background-color: #9e0000;
-  height: 25%;
-  
-}
-#logo img {
-  display: flex;
-  width: 400px;
+.caixa-video {
   position: fixed;
-  margin-left: 100px;
-  margin-top: -140px; 
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+.caixa-video video {
+  min-height: 100%;
+  min-width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+.container {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: var(--main-color);
+  border-bottom: var(--white);
+  border: 1px solid var(--white);
+}
+section {
+  padding: 3rem 2rem;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.container section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 50px;
+  padding: 1.5rem 0;
+  position: relative;
+}
+
+.container section a img {
+  height: 6rem;
+  border: 3px solid var(--black);
+}
+
+.container section nav a {
+  margin: 0 1rem;
+  font-size: 1.8rem;
+  color: var(--black);
+  transition: 0.2s linear;
+}
+
+.container section nav a:hover {
+  color: var(--white);
+  border-bottom: 0.1rem solid var(--black);
+  padding-bottom: 0.5rem;
+}
+
+.mascara {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background: linear-gradient(
+    109deg,
+    rgba(10, 12, 16, 0.99) 15%,
+    rgba(10, 12, 16, 0.7) 50%,
+    rgba(10, 12, 16, 0.99) 85%
+  );
+}
+
+.caixa-principal {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.caixa-principal div {
+  max-width: 60rem;
+}
+
+.caixa-principal div h3 {
+  color: var(--white);
+  font-size: 6rem;
+  text-transform: uppercase;
+}
+
+.caixa-principal div p {
+  font-size: 2rem;
+  color: var(--white);
+  font-weight: lighter;
+  padding: 1rem 0;
+  line-height: 1.8;
+}
+
+.botao-link {
+  background-color: var(--main-color);
   cursor: pointer;
-  
+  margin-top: 2rem;
+  display: inline-block;
+  font-size: 1.7rem;
+  color: var(--black);
+  padding: 1rem 3rem;
+  border: none;
+  transition: 0.3s linear;
 }
 
-#description {
+.caixa-principal div a:hover {
+  animation: shake 0.5s linear 1;
+}
+/* Page Project */
+.titulo {
+  text-align: center;
+  color: var(--white);
+  text-transform: uppercase;
+  padding-bottom: 3.5rem;
+  padding-top: 10rem;
+  font-size: 4rem;
+}
+.projects .titulo span {
+  color: var(--main-color);
+}
+
+.projects .container-projects {
   display: flex;
-  font-size: 30px;
-  justify-content: end;
-  padding-top: 100px;
-  padding-right: 30px;
-  
+  align-items: center;
+  background-color: var(--black);
+  gap: 1.5rem;
+  flex-wrap: ;
 }
 
-#information {
+.projects .container-projects .img-projects {
+  flex: 1 1 45rem;
+}
+.projects .container-projects .img-projects img {
+  width: 100%;
+}
+
+.projects .container-projects .sobre-projects {
+  flex: 1 1 45rem;
+  padding: 2rem;
+}
+
+.projects .container-projects .sobre-projects h3 {
+  font-size: 3rem;
+  color: var(--white);
+}
+
+.projects .container-projects .sobre-projects p {
+  font-size: 1.5rem;
+  font-weight: lighter;
+  color: var(--white);
+  line-height: 1.8;
+  padding: 1rem 0;
+}
+/*Services*/
+
+/*About US*/
+
+.titulo-sobre {
+  text-align: center;
+  color: var(--white);
+  text-transform: uppercase;
+  padding-bottom: 3.5rem;
+  padding-top: 10rem;
+  font-size: 4rem;
+}
+.projects-sobre .titulo-sobre span {
+  color: var(--main-color);
+}
+
+.projects-sobre .container-projects-sobre {
   display: flex;
-  justify-content: end;
-  font-size: 10px;
-  padding-right: 110px;
-  
+  align-items: center;
+  background-color: var(--black);
+  gap: 1.5rem;
 }
 
-main {
-  display: flex;
-  justify-content: center;
-  background-color: #000000;
-  margin-top: 88px;
-  
-}
-
-main section ul {
-  list-style:none;
-  display: flex;
-  gap: 190px;
-  font-size: 25px;
-}
-section ul li {
-  cursor: pointer;
-  transition: background 0.2s;
-}
-section ul li:hover{
-  background-color: rgba(248, 248, 248, 0.274);
-  border-radius: 10%;
-
-}
-
-#SocialLinks{
-  font-size: 25px;
-  display: flex;
-  position: absolute;
-  top: 180px;
-  left: 850px;
-  gap: 25px;
-}
-
-#SocialLinks a:hover{
-
-  background-color: rgba(255, 255, 255, 0.288);
-  transition: background 0.2s;
-  border-radius: 5%;
+.projects-sobre .container-projects-sobre .img-projects-sobre {
+  flex: 0 0 15rem;
 }
 
 
-#pictures  {
-  display: flex;
-  border: solid rgb(108, 108, 109) 5px;
-  margin-top: 100px;
-  margin-left: 20px;
-  width: 569px;
-  height: 710px;
-  
-  
+.projects-sobre .container-projects-sobre .sobre-projects-sobre {
+  flex: 0 0 45rem;
+  padding: 2rem;
 }
-#pictures p {
-  display: flex;
-  height: 700px;
-  
-  
+
+.projects-sobre .container-projects-sobre .sobre-projects-sobre h3 {
+  font-size: 3rem;
+  color: var(--main-color);
 }
-#pictures h1{
-  color: #000000;
-  position: absolute;
-  font-size: 40px;
-  top: 310px;
-  left: 215px;
+
+.projects-sobre .container-projects-sobre .sobre-projects-sobre p {
+  font-size: 1.5rem;
+  font-weight: lighter;
+  color: var(--white);
+  line-height: 1.8;
+  padding: 1rem 0;
 }
-#explication{
-  color: #000000;
-  position:absolute;
-  top: 30%;
-  left: 50%;
-}
+
+
+
